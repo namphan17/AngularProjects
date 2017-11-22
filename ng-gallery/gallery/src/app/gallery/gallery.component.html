@@ -1,0 +1,15 @@
+<h3>{{ title }}</h3>
+<div class="row">
+  <button class="btn btn-lg btn-info" [class.active]="filterBy == 'all'" (click)="filterBy='all'">All</button>
+  <button class="btn btn-lg btn-info" [class.active]="filterBy == 'beauty'" (click)="filterBy='beauty'">Beauty</button>
+  <button class="btn btn-lg btn-info" [class.active]="filterBy == 'funny'" (click)="filterBy='funny'">Funny</button>
+  <button class="btn btn-lg btn-info" [class.active]="filterBy == 'dota'" (click)="filterBy='dota'">Dota</button>
+
+  <ul id="thumbnailList">
+    <li *ngFor="let image of (visibleImages | imageFilter:filterBy)">
+      <a [routerLink]="['/image', image.id]">
+        <img src="{{ image.url }}" class="tn" width="200" height="160">
+      </a>
+    </li>
+  </ul>
+</div>

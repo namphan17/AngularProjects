@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  font-family: 'Open San', sans-serif;
+  background-color: #efefef;
+}
+
+.main-content {
+  padding-top: 60px;
+  color: #333;
+}
